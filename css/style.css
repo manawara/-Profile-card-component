@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --primary-color: hsl(185, 75%, 39%);
+  --dark-blue: hsl(229, 23%, 23%);
+  --light-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.8rem;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--primary-color);
+}
+
+.bg-pattern-top {
+  position: absolute;
+  top: -76%;
+  right: 55%;
+}
+
+.bg-pattern-bottom {
+  position: absolute;
+  bottom: -70%;
+  left: 50%;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.card {
+  position: relative;
+  background: #fff url("/images/bg-pattern-card.svg") no-repeat;
+  width: 350px;
+  height: 380px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.card-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.profile-img img {
+  display: block;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin-top: 50px;
+}
+
+.profile-name {
+  display: flex;
+  margin: 25px 0 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-name h2 {
+  font-size: 2rem;
+}
+
+.profile-name span {
+  margin-left: 10px;
+  color: var(--light-blue);
+  font-weight: 700;
+}
+
+.profile-city {
+  color: var(--light-blue);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.card-footer {
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.card-footer::before {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  content: "";
+  width: calc(100% + 60px);
+  height: 1px;
+  background-color: var(--light-blue);
+}
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.social-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.social-number {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.social-description {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--light-blue);
+  letter-spacing: 0.3px;
+  margin-top: 4px;
+}
+
+/* Media query */
+
+/* Tablet */
+@media (min-width: 500px) {
+  .bg-pattern-top {
+    top: -86%;
+    right: 75%;
+  }
+
+  .bg-pattern-bottom {
+    position: absolute;
+    bottom: -80%;
+    left: 75%;
+  }
+}
+@media (min-width: 800px) {
+  .bg-pattern-top {
+    top: -95%;
+    right: 55%;
+  }
+
+  .bg-pattern-bottom {
+    position: absolute;
+    bottom: -95%;
+    left: 55%;
+  }
+}
+
+/* Desktop */
